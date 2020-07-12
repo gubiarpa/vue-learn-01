@@ -16,6 +16,11 @@ export default new Vuex.Store({
   mutations: {
     aumentar(state, index) {
       state.frutas[index].cantidad++;
+    },
+    limpiar(state) {
+      state.frutas.forEach(fruta => {
+        fruta.cantidad = 0;
+      });
     }
   },
   actions: {

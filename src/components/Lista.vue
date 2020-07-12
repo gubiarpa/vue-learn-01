@@ -6,6 +6,7 @@
           <span class="badge badge-primary badge-pill">{{ fruta.cantidad }}</span>
         </li>
       </ul>
+      <button @click="limpiar" class="btn btn-danger btn-block mt-4">Limpiar Lista</button>
     </div>
 </template>
 
@@ -18,7 +19,7 @@ export default {
       ...mapState(['frutas'])
     },
     methods: {
-      ...mapMutations(['aumentar'])
+      ...mapMutations(['aumentar', 'limpiar'])
     }
 }
 </script>
